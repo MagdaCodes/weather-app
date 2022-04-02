@@ -59,7 +59,8 @@ p .fa-solid {
   padding: 0px;
 }
 .col-3 {
-  padding: 0px;
+  box-sizing: 3px;
+  padding: 5px;
   text-align: center;
 }
 .col-2 {
