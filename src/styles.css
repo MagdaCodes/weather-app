@@ -115,3 +115,18 @@ button:hover {
   top: -34px;
   font-size: 15px;
 }
+.link-info {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  color: #234685;
+}
+
+.link-source {
+  font-size: 15px;
+}
+.link-source:hover {
+  color: #ffe6cf;
+  cursor: pointer;
+}
