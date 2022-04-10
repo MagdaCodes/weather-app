@@ -121,12 +121,18 @@ button:hover {
   position: relative;
   top: -34px;
   font-size: 15px;
+  color: rgb(33, 33, 33);
 }
+
 .link-info {
   text-align: center;
   font-family: "Lato", sans-serif;
   font-size: 10px;
   font-weight: 600;
+  color: #234685;
+  padding-top: 10px;
+}
+.link-info:hover {
   color: #234685;
 }
 
@@ -136,4 +142,20 @@ button:hover {
 .link-source:hover {
   color: #ffe6cf;
   cursor: pointer;
+}
+.active {
+  color: #234685;
+  cursor: default;
+  text-decoration: none;
+}
+.active:hover {
+  cursor: default;
+  color: #fee7d3;
+}
+.temp {
+  color: #234685;
+  cursor: default;
+}
+.temp:hover {
+  color: #fee7d3;
 }
