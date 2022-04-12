@@ -23,6 +23,30 @@ function formatDate(timestamp) {
   return `${day},  ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+          <div class="col-2">
+              <div class="weather-forecast-date">
+              ${day}<br><br></div>
+             <i class="fa-solid fa-sun"></i>
+              <div class="weather-forecast-temperatures">
+               <span class= "temperature">-4°</span><span class="temp-day">4°</span> 
+            </div>
+           </div>
+     `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 function showTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("h2");
@@ -105,3 +129,4 @@ let clickCelsius = document.querySelector("#celsius");
 clickCelsius.addEventListener("click", changeTemp);
 
 search("Warsaw");
+displayForecast();

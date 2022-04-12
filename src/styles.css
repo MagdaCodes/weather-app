@@ -159,3 +159,6 @@ button:hover {
 .temp:hover {
   color: #fee7d3;
 }
+.weather-forecast-temperatures {
+  padding-top: 20px;
+}
