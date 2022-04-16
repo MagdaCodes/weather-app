@@ -7,7 +7,7 @@ body {
   max-height: fit-content;
 }
 .card {
-  background: linear-gradient(to bottom, #ffe6cf 0%, #fff1eb 15%, #ace0f9 89%);
+  background: linear-gradient(to bottom, #ffe6cf 5%, #fff1eb 15%, #ace0f9 89%);
   box-shadow: 5px 5px 15px #234685;
   border-radius: 20px;
 }
@@ -163,4 +163,7 @@ button:hover {
 }
 .weather-forecast-date {
   color: #234685;
+}
+.weather-icon {
+  padding-top: 20px;
 }
