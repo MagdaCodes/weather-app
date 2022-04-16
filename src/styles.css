@@ -7,7 +7,7 @@ body {
   max-height: fit-content;
 }
 .card {
-  background: linear-gradient(to top, #ffe6cf 0%, #fff1eb 15%, #ace0f9 85%);
+  background: linear-gradient(to bottom, #ffe6cf 0%, #fff1eb 15%, #ace0f9 89%);
   box-shadow: 5px 5px 15px #234685;
   border-radius: 20px;
 }
@@ -23,7 +23,7 @@ p,
 }
 h1 .temperature {
   color: #234685;
-  font-size: 70px;
+  font-size: 75px;
   padding: 0px;
   text-align: center;
 }
@@ -119,8 +119,8 @@ button:hover {
 .units {
   position: relative;
   top: -34px;
-  font-size: 15px;
-  color: rgb(33, 33, 33);
+  font-size: 20px;
+  color: #234685;
 }
 
 .link-info {
@@ -160,4 +160,7 @@ button:hover {
 }
 .weather-forecast-temperatures {
   padding-top: 20px;
+}
+.weather-forecast-date {
+  color: #234685;
 }

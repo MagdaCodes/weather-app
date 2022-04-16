@@ -59,7 +59,7 @@ function displayForecast(response) {
                 />
               <div class="weather-forecast-temperatures">
                <span class= "temperature">${Math.round(
-                 forecastDay.temp.min
+                 forecastDay.temp.max
                )}°</span>
                <span class="temp-day">${Math.round(
                  forecastDay.temp.min
@@ -111,23 +111,6 @@ function showCityValues(event) {
   search(cityInput.value);
 }
 
-function changeTemp(event) {
-  event.preventDefault();
-  let tempCelsius = document.querySelector("#temperature");
-  tempCelsius.innerHTML = Math.round(celsiusTemperature);
-  clickCelsius.classList.add("active");
-  clickFahrenheit.classList.remove("active");
-}
-
-function changeTempF(event) {
-  event.preventDefault();
-  let tempFahrenheit = (celsiusTemperature * 9) / 5 + 32;
-  clickCelsius.classList.remove("active");
-  clickFahrenheit.classList.add("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(tempFahrenheit);
-}
-
 function search(city) {
   let apiKey = "32e21d67cb89f007d8b2ad84f78f5d7f";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
@@ -149,19 +132,11 @@ navigator.geolocation.getCurrentPosition(findLocation);
 let showCity = document.querySelector("#city-input");
 showCity.addEventListener("submit", showCityValues);
 
-let celsiusTemperature = null;
-
 let searchCity = document.querySelector("#city-input");
 searchCity.addEventListener("submit", search);
 
 let currentLocation = document.querySelector("#current-location-button");
 currentLocation.addEventListener("submit", findLocation);
-
-let clickFahrenheit = document.querySelector("#fahrenheit");
-clickFahrenheit.addEventListener("click", changeTempF);
-
-let clickCelsius = document.querySelector("#celsius");
-clickCelsius.addEventListener("click", changeTemp);
 
 search("Warsaw");
 displayForecast();
