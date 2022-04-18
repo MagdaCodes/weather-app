@@ -125,7 +125,11 @@ function findLocation(position) {
 
   axios.get(apiUrl).then(showTemperature);
 }
-navigator.geolocation.getCurrentPosition(findLocation);
+
+function showLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(findLocation);
+}
 
 let showCity = document.querySelector("#city-input");
 showCity.addEventListener("submit", showCityValues);
@@ -134,7 +138,7 @@ let searchCity = document.querySelector("#city-input");
 searchCity.addEventListener("submit", search);
 
 let currentLocation = document.querySelector("#current-location-button");
-currentLocation.addEventListener("submit", findLocation);
+currentLocation.addEventListener("click", showLocation);
 
-search("Warsaw");
+search("Paris");
 displayForecast();
