@@ -140,5 +140,5 @@ searchCity.addEventListener("submit", search);
 let currentLocation = document.querySelector("#current-location-button");
 currentLocation.addEventListener("click", showLocation);
 
-search("Paris");
+search("Warsaw");
 displayForecast();
